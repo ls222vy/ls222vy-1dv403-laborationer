@@ -5,14 +5,52 @@ window.onload = function(){
 	
 	var birthday = function(date){
 		
+	// Kollar om formatet är rätt inmata YYY-MM-DD annars kastar undantag
+	var todaysDate = new Date() ;
+		var yourBirthday = new Date(date);
+		var numbersOfDays;
 
 
-			// Din kod här.
+		if(isNaN(yourBirthday))
+	{
+		 throw {'message' : "ej giltigt datum."};
+	}
+	
+	if ( todaysDate < yourBirthday ){
+	
+		throw {'message': "Du är ej född."};
+	}
 
 
 
+		yourBirthday.getFullYear(todaysDate.getFullYear());
+		todaysDate.getDate(todaysDate.getDate() -1);
+	
 
+		
+		 if (todaysDate > yourBirthday ){
+		 
+		 	yourBirthday.setFullYear(todaysDate.getFullYear()+1);
+		 }
+ 	
+ 	  numbersOfDays = Math.floor((yourBirthday - todaysDate) / (1000*60*60*24));
+		
+		 return	numbersOfDays;
+			
+			
+			
+			
+ 	
+	
+								// Din kod här.
 	};
+	
+	
+				
+
+	
+	
+	
 	// ------------------------------------------------------------------------------
 
 
