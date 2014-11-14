@@ -16,15 +16,21 @@ window.onload = function(){
 		 throw {'message' : "ej giltigt datum."};
 	}
 	
-	if ( todaysDate < yourBirthday ){
+		// if(todaysDate > yourBirthday) Koden bete sig konstigt
+	if (
+	  (yourBirthday.getFullYear() > todaysDate.getFullYear())||
+	  (yourBirthday.getFullYear()=== todaysDate.getFullYear() && yourBirthday.getMonth()> todaysDate.getMonth()) ||
+	  (yourBirthday.getFullYear()=== todaysDate.getFullYear() && yourBirthday.getMonth()=== todaysDate.getMonth()&& yourBirthday.getDate()>todaysDate.getDate())
+	)
+	{
 	
 		throw {'message': "Du är ej född."};
 	}
 
 
 
-		yourBirthday.getFullYear(todaysDate.getFullYear());
-		todaysDate.getDate(todaysDate.getDate() -1);
+		yourBirthday.setFullYear(todaysDate.getFullYear());
+		todaysDate.setDate(todaysDate.getDate() -1);
 	
 
 		

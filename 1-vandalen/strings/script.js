@@ -31,29 +31,6 @@ window.onload = function(){
 };
 
 
-// var i;
- //var text = "";
-  // Plats för förändring.  
-  // Returnera den konverterade strängen.
-  // Vid fel, kasta ett undantag med ett meddelande till användaren. 
- 
- //for(i = 0; i < str.length; i += 1){
-  
- // if(str.charCodeAt(i) > 64 && str.charCodeAt(i) < 91 || str.charCodeAt(i) > 195 && str.charCodeAt(i) < 215){
-  
- // text = text + str.charCodeAt[i].replace("A","#").toLowerCase();
- // }
- // else {
-  //text = text + str.charCodeAt[i].replace("a","#").toUpperCase();
- // }
- 
- //}
-//	return (str);
-//}
-//else {
- //  return ("Felmeddelande");
- // }
-
 
 
 	
