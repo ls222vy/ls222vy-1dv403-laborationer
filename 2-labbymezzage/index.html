@@ -10,7 +10,7 @@
          <link rel="stylesheet" href="css/style.css">
          <script src="js/Message.js"></script>
          <script src="js/MessageMotor.js"></script>
-         <script scr="js/messageMotor_run.js"></script>
+         <script src="js/messageMotor_run.js"></script>
         
   </head>
              
@@ -22,10 +22,14 @@
           </div>  
           
                 <div id="messagearea">
-                 <textarea row="2" cols="34">Här kan du skriva</textarea>
+                  <div id"num"></div> 
                   
-                 <button>skicka</button>
-                </div>
+                  <form action="post" name="form">
+                     <textarea id="textarea" placeholder="skriv"></textarea>
+                     <input id="submit" class="right" class="click" type="button" value ="skicka">
+
+                 </form>
+                    </div>
              
         </body>
              
