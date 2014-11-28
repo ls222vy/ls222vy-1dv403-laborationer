@@ -5,8 +5,9 @@
 
   <head>
         
-         <title>2-Labby</title>
+         <title>Labby</title>
          <meta charset="UTF-8" />
+         <link href='//fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet'>
          <link rel="stylesheet" href="css/style.css">
          <script src="js/Message.js"></script>
          <script src="js/MessageMotor.js"></script>
@@ -14,27 +15,31 @@
         
   </head>
              
-          <body>
-              
-             <h1>Meddelande Box</h1>
-          <div id ="content">
+<body>
+<h1>Meddelande Box</h1>
+   
+<div id="content">
+
+    <div id="messagearea">
+     
+      <div id="myMessages"></div>
            
-          </div>  
+            <div id="count">Antal Medellande</div>
+                
+                  <div id="messageWindow">
+
+            <textarea id="textInput"rows="2" cols="32" placeholder="Ditt meddelande här"></textarea>
+            <button id="submitInput">Skicka</button>
+        </div>
+
+
+            
+    </div>
+
+</body>
+
+</html>
           
-                <div id="messagearea">
-                  <div id"num"></div> 
-                  
-                  <form action="post" name="form">
-                     <textarea id="textarea" placeholder="skriv"></textarea>
-                     <input id="submit" class="right" class="click" type="button" value ="skicka">
-
-                 </form>
-                    </div>
-             
-        </body>
-             
-             </html>
-
 
 
 

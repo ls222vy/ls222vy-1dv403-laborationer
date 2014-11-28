@@ -1,0 +1,363 @@
+/*@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-color: #70A9C9;
+}
+
+/*#container {
+    width :100%;
+    max-width:600px;
+    display:block;
+    margin:0 auto;
+}*/
+
+#content {
+    border:1px solid #000000;
+    background:#ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 328px;
+    height:395px;
+    overflow: auto;
+    padding: 1 0 0  3px;
+    -moz-border-radious:3px;
+    -webkit-border-radius:3px;
+}
+
+h1{
+   /* color:#0095b6;*/
+   display:Block;
+    margin-top:90px;
+    text-align:center;
+    padding:1em;
+    font-size:31px;
+    text-shadow: 2px 2px #8b0000;
+}
+#messagearea {
+    margin-top:14px;
+    margin-left:auto;
+    margin-right: auto;
+    width:300px;
+    overflow:auto;
+    padding: 0 0 0 5px;
+   
+}
+
+#textInput{
+    background:#CCFFFF;
+    border:1px solid #000000;
+    width: 97%;
+    height:100px;
+    margin-left : auto;
+    margin-right:auto;
+    padding: 0 0 0 2px;
+}
+
+#count{
+    text-align:right;
+    color:#3c3c3c;
+    font-family: cabin-regular;
+    font-size:9px;
+    font-weight:normal;
+    margin-bottom: 7px;
+    margin-top: 5px;
+}
+#messageWindow {
+    display:block;
+    width: 100%;
+}
+
+#submitInput {
+    border:1px solid #000000;
+    padding: 1px;
+    margin-bottom: 2px;
+    text-decoration:none;
+    -webkit-border-radius:2px;
+    -webkit-box-shadow:0 1 px 0 white;
+    background:#ffffff;
+    float:right;
+}
+#myMessages {
+    height: 229px;
+    overflow: auto;
+    border-radius: 9px;
+    background-color:#BDBDBD;
+   /*-webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; */ 
+    margin-top: auto;
+  /*border: 2px solid rgba(0,0,0,0);*/
+}
+.myMessage{
+    float:left;
+    color: #3c3c3c;
+     font-weight:200;
+    font-size: 15px;
+    -webkit-border-radius: 5px;
+    line-height:20px;
+    background-color : #97e5ed;
+    margin-top: 5px;
+    margin-left:8px;
+    margin-bottom:10px;
+    width: 95%;
+    -webkit-box-sizing: border-box; 
+      -moz-box-sizing: border-box;    
+  
+}
+
+p {
+    display:block;
+    padding:7px;
+    float:left;
+   
+    word-wrap: break-word;
+    -webkit-border-radius: solid 5px;
+}
+
+.messageRemove{
+   display:block;
+   width:20px;
+   height:20px;
+   float:right;
+   background-image: url("pics/1.png");
+  
+}
+
+footer{
+    clear:both;
+    display:block;
+    float:right;
+    color:#819FF7;
+    font-size: 16px;
+    text-align:right;
+     margin: 3;
+}
+ 
+.messageTime {
+    display:block;
+    width:20px;
+    height:20px;
+    float:right;
+}
+p{
+    margin:0;
+}
+
+.div {
+    
+    background-color: #ADEAB0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #content {
+    border:1px solid #000000;
+    background:#ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    height:180px;
+    overflow: auto;
+    -moz-border-radious:3px;
+    -webkit-border-radius:3px;
+}
+h1{
+    color:#0095b6;
+    margin-top:90px;
+    text-align:center;
+    padding:1em;
+    font-size:31px;
+}
+#messagearea {
+    margin-top:115px;
+    margin-left:auto;
+    margin-right: auto;
+    width:300px;
+    overflow:auto;
+    padding: 0 0 0 3px;
+   
+}
+
+
+
+textarea{
+    /*background:#CCFFFF;*/
+ /*   border:1px solid #000000;
+    width: 98%;
+    height:100px;
+    
+}/*
+button {
+    border:1px solid #000000;
+    padding: 1px;
+    text-decoration:none;
+    -webkit-border-radius:4px;
+    -webkit-box-shadow:0 1 px 0 white;
+    background:#7df9ff;
+    float:right;
+}
+
+.right {
+     border:1px solid #000000;
+}/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*/ <body>
+        
+            
+            <div id="newText"></div>
+            
+            <div id="textInput">
+                <div id="count"></div>
+                <form action="post" name="form">
+                    <textarea id="textarea" name="textarea"></textarea>
+                    <input id="submit" class="right" class="button" type="button" value="Submit">
+                </form>
+                
+            </div>*/
+
+/* ody{
+    background-color:grey;
+}
+#newText{
+    border: 1px solid #000;
+    background-color:yellow;
+}
+#textInput{
+    border: 1px solid #000;
+}
+#count{
+    border: 1px solid #000;
+}
+.pText{
+    color:red;
+}
+.pTime{
+    text-align: right;
+}
