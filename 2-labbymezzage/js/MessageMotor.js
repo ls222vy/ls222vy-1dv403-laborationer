@@ -8,15 +8,15 @@ var MessageMotor = {
     
    
    init: function(){
-       // Hämtar html document
+       
        var button = document.getElementById("submitInput");
        var texta = document.getElementById("textInput");
        
-       //Skapa händelse och validerar om(nummer 13 är enterkey)
+       //Skapa händelse och radbryttning
        
        texta.addEventListener ("keypress", function(e){
          
-           if(!e){ e = window.event;
+           if(!e){ e = event;
            }
            
            if (e.shiftKey){
@@ -24,7 +24,7 @@ var MessageMotor = {
            }
            
            else if(e.keyCode == 13) {
-               event.preventDefault();// Hindra formularet från att skicka till servern.
+               event.preventDefault();
               newMessage();
            }
        });
@@ -48,8 +48,7 @@ var MessageMotor = {
        var count = document.getElementById("count");
        count.innerHTML ="Antal meddelande: " + MessageMotor.messages.length;
        
-       //Raderar alla befintliga meddelanden på sidan och skriv ut samtliga meddelande i arrayen
-       
+      
        document.getElementById("myMessages").innerHTML = "";
        
        for (var i = 0; i < MessageMotor.messages.length; i+=1){
@@ -60,7 +59,7 @@ var MessageMotor = {
     
        renderMessage: function (messageID) {
        
-       //Hämtar specifikt meddelande (messageID)(Message text) och lägg i en "p" tagg
+       //Hämtar specifikt meddelande (messageID) och lägg i en "p" tagg
        
       var text = document.createElement("p"),
        //Div som ska hämta
@@ -69,54 +68,64 @@ var MessageMotor = {
      
       
        
-    // Skapa en div där ett meddelande ska samlas och utskrift
+    // Skapa en div där ett meddelande ska samlas ock skrift
     
-     aMessage = document.createElement("div");
-     aMessage.classname = "myMessage";
+     labbMessage = document.createElement("div");
+     labbMessage.classname = "myMessage";
      text.innerHTML = MessageMotor.messages[messageID].getHTMLText();
-     myMessages.appendChild(aMessage);
-     aMessage.appendChild(text);
+     myMessages.appendChild(labbMessage);
+     labbMessage.appendChild(text);
      
       
        //Sätter tiden meddelandet
        
       var messageTime = document.createElement("footer");
-      messageTime.innerHTML= MessageMotor.messages[messageID].getText();
-      aMessage.appendChild(messageTime);
-   
-     //console.log( MessageMotor.messages[messageID]);
-      //messageTime.innerHTML = MessageMotor.messages[messageID].getText().toLocaleTimeString();
-       
-       //Knapp för raderar meddelande
-      var messageRemove = document.createElement("a");
-       messageRemove.className = "messageRemove";
-       messageRemove.href = "#";
-       
-       messageRemove.onclick = function(){
-        if(confirm("Är du säker på att du vill ta bort meddelande?")){
-         MessageMotor.removeMessage(messageID);
-         aMessage.appendChild(messageRemove);
-         
-          }
+      messageTime.innerHTML= MessageMotor.messages[messageID].getDate().toLocaleTimeString();
+      labbMessage.appendChild(messageTime);
       
+    
+        //Knapp för raderar meddelande
+      var messageDelete = document.createElement("a");
+       messageDelete.className = "messageDelete";
+       messageDelete.href = "#";
+        labbMessage.appendChild(messageDelete);
+      
+      
+        messageDelete.onclick = function(){
+       
+        if(confirm("Är du säker på att du vill ta bort meddelande?")){
+         MessageMotor.messageDelete(messageID);
+        
+        }
+       
+        
         };
-    
-    
-       //Lägger till knapp för tiden
+        
+       //Lägger till knapp för att radera
         var messageDateTime = document.createElement("a");
         messageDateTime.className = "messageTime";
         messageDateTime.href = "#";
+        labbMessage.appendChild(messageDateTime);
         
-        messageDateTime.onclik = function (){
-         console.log(MessageMotor.messages[messageID].getDateText().toLocaleTimeString());
-         aMessage.appendChild(messageDateTime);
+        //När man klickar klockan images den visan Datum,Månad, timme,minuter och segunder
+         
+         messageDateTime.onclick = function (){
+         alert (MessageMotor.messages[messageID].getDateText());
+         
+       
         };
-   
+     
+       },
+         // Raderar meddelande(splice = metoden lägger / tar bort objekt till / från en array och returnerar den borttagna objekt.)
+            messageDelete:function(messageID){
+            MessageMotor.messages.splice(messageID, 1);
+            MessageMotor.renderMessages();
        }
-        
+      
+         
 };
 
-
+     
 
 
      

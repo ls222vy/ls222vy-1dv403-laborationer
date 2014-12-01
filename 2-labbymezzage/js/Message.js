@@ -30,14 +30,11 @@ Message.prototype.getHTMLText = function() {
    
 };
 
-Message.prototype.getDateText = function() {
-
-
+Message.prototype.getDateText = function () {
+   
+   var showTime = { day: 'numeric', year: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    return this.getDate().toLocaleString('sv-SE', showTime);
 };
-  
-
-
-
 
 
 
@@ -63,4 +60,4 @@ Message.prototype.getDateText = function() {
 
   
   
-  // return this.getText().replace(/\n/g, "<br>")
+ 
