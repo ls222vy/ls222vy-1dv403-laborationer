@@ -14,9 +14,14 @@ var MessageMotor = {
        
        //Skapa händelse och radbryttning
        
-       texta.addEventListener ("keypress", function(e){
+       texta.addEventListener("keypress", function(e){
          
-           if(!e){ e = event;
+           if(!e)
+           { 
+            
+            e = event;
+           
+            
            }
            
            if (e.shiftKey){
@@ -37,7 +42,7 @@ var MessageMotor = {
            MessageMotor.messages.push(new Message (texta.value, new Date())); //push metoden lägger till  en ny post
            
            MessageMotor.renderMessages();
-           texta.value ="";
+           texta.value = "";
        }
      
     },
