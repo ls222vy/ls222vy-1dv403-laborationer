@@ -1,3 +1,7 @@
+html{
+  height: 100%;  
+}
+
 body {
     background-color: gray;
     font-family : cabin-regular;
@@ -46,4 +50,36 @@ body {
     padding-top :10px;
     padding-left:10px;
     padding-right:10px;
+}
+#imgFolder{
+    display:block;
+    position:relative;
+    height:375px;
+    width:450px;
+    border:2px solid white;
+    left:10%;
+    top:10%;
+    border-radius:9px;
+ }
+ .topImage {
+     float:left;
+     display:block;
+     padding:2px;
+ }
+ 
+ .topClose {
+     float:right;
+     display:block;
+     margin-right:2px;
+     -webkit-transition: -webkit-transform .2s ease-in-out;
+  
+ }
+ 
+ .topClose:hover {
+     -webkit-transform: scale(0.8);
+}
+
+#picContainer {
+    display:block;
+    background-color:#c4c4c4;
 }
