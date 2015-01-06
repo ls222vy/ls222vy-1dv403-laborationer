@@ -67,7 +67,7 @@
              
              var url = "http://homepage.lnu.se/staff/tstjo/labbyServer/imgviewer/";
              
-              new AjaxCon(url,function (data)){
+           //   new AjaxCon(url,function (data)){
                
                //Ta bort laddning-gif när anropet är färdigt.
                bottom.removeChild(loader);
