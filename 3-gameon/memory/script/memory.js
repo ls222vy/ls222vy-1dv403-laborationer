@@ -5,8 +5,8 @@ var Memory = {
  
 cardLocation: [],
 cardWant:[],
-rows: 2,
-cols: 2,
+rows: 4,
+cols: 4,
 swapCount:0,
  win: 0,
 noOfTries:0,

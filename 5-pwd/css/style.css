@@ -1,0 +1,49 @@
+body {
+    background-color: gray;
+    font-family : cabin-regular;
+    font-weight:500;
+   
+     background-position: center center; 
+}
+#webDesk {
+    display:block;
+    height:640px;
+    width:1024px;
+    margin: 0 auto;
+}
+#desktop {
+    display:block;
+    background-image:url('background/walnutbgpic.jpg');
+    height:638px;
+    width:1020px;
+        border:2px white;
+        border-top-style:solid;
+        border-right-style:solid;
+        border-left-style:solid;
+        border-top-right-radius:18px;
+        border-top-left-radius:18px;
+}
+#menu {
+    height:60px;
+    width:1020px;
+    border:2px solid white;
+    border-bottom-left-radius:14px;
+    border-bottom-right-radius:14px;
+}
+
+.button {
+    float:left;
+    display:block;
+    height:inherit;
+    margin-left:5px;
+    -webkit-transition:-webkit-tranform.2s ease-in-out;
+    
+}
+ .button:hover {
+        -webkit-transform:scale(1.2);
+    }
+#menu img {
+    padding-top :10px;
+    padding-left:10px;
+    padding-right:10px;
+}
